@@ -4,7 +4,6 @@ applications:
   host: backlog-pal-sat-hind
   memory: 1G
   instances: 1
-  env:
-    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-sat-hind.apps.evans.pal.pivotal.io
-  services:
+ services:
   - tracker-backlog-database
+  - tracker-service-registry
