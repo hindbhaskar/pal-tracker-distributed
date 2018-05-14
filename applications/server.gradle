@@ -1,6 +1,12 @@
 apply plugin: "org.springframework.boot"
 apply plugin: "io.spring.dependency-management"
 
+dependencyManagement {
+    imports {
+        mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:$springCloudServicesVersion"
+    }
+}
+
 dependencies {
     compile project(":components:rest-support")
 
@@ -16,8 +22,4 @@ dependencies {
     testCompile project(":components:test-support")
 }
 
-dependencyManagement {
-    imports {
-        mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:$springCloudServicesVersion"
-    }
-}
+
