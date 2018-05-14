@@ -4,7 +4,7 @@ applications:
   host: allocations-pal-sat-hind
   memory: 1G
   instances: 1
-    env:
+  env:
       GRANT_TYPE: client_credentials
       SECURITY_USER_NAME: actuator
       SECURITY_USER_PASSWORD: operations4red
